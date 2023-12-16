@@ -1,0 +1,20 @@
+{% block body %}
+
+    <div class="container mt-3">
+        {% for flash_message in app.session.flashBag.get('notice') %}
+            <div class="alert alert-success">
+                <strong>{{ flash_message }}!!!</strong> A product has been added to the list.!!!
+            </div>
+        {% endfor %}
+        {% for flash_message in app.session.flashBag.get('error') %}
+            <div class="alert alert-danger">
+                <strong>{{ flash_message }}!!!</strong> A product has been removed from the list.!!!
+            </div>
+        {% endfor %}</div>
+
+    <footer id="footer" class="bg text-black py-5" style="background: white">
+
+    </footer>
+
+
+{% endblock %}
